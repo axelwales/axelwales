@@ -1,0 +1,28 @@
+<div class="containter-fluid projects-container">
+	<div class="row">
+	  <div class="col-sm-6 project-create-col">
+	    <h3>Add Project</h3>
+	    <form class="form-horizontal" ng-submit="$ctrl.addProject()">
+	      <div class="form-group">
+          <label for="new-project-name-input" class="sr-only">Project Name</label>
+          <div class="col-sm-6">
+	          <input id="new-project-name-input" class="form-control" type="text" placeholder="Project Name" ng-model="$ctrl.newProject.name"></input>
+	        </div>
+	      </div>
+	      <div class="form-group">
+		      <div class="col-sm-6">
+		       <button class="btn btn-default" type="submit">New Project</button>
+		      </div>
+	      </div>
+	    </form>
+	  </div><!-- end .project-create-col -->
+	
+	  <div class="col-sm-6 project-list-col">
+			<ul class="project-list list-group" expandable-list>
+			  <li class="project-item list-group-item" ng-repeat="project in $ctrl.projects">
+			    <project project="project" on-update="$ctrl.updateList(project, prop, value)"></project>
+			  </li>
+			</ul>
+		</div><!-- end .project-list-col -->
+	</div>	
+</div>

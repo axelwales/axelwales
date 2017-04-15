@@ -1,0 +1,4 @@
+<div ng-switch="ctrl.editMode">
+  <div ng-switch-when="true" ui-tinymce="ctrl.tinymceOptions" ng-model="ctrl.tinymceModel"></div>
+  <ng-transclude ng-switch-default></ng-transclude>
+</div>

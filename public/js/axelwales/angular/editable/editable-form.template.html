@@ -1,0 +1,12 @@
+<div class="container-fluid editable-container">
+  <div class="row" ng-repeat="field in $ctrl.fields">
+    <div class="col-sm-{{field.options.size}}">
+      <div class="form-group">
+        <label class="control-label">{{field.label}}</label>
+        <tinymce tinymce-content="field.content" tinymce-options="field.tinymceOptions" edit-mode="field.editMode" on-update="$ctrl.update(field, content)" on-change="$ctrl.onChange(field, event)">
+          <div class="form-control" ng-bind-html="field.content" ng-click="$ctrl.edit(field)"></div>
+        </tinymce>
+      </div><!-- end .form-group -->
+    </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<div class="container-fluid project-container" expandable-item editable-content on-update="$ctrl.update(field)">
+  <div class="row" expandable-item-header="project">
+    <div class="col-xs-6">
+      <div class="project-header" ng-bind-html="$ctrl.project.name"></div>
+    </div>
+    <div class="col-xs-6">
+      <editable-save></editable-save>
+    </div>
+  </div>
+  <div class="row">
+    <editable-form fields="$ctrl.fields"></editable-form>
+  </div>
+</div>

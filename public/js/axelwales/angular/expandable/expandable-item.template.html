@@ -1,0 +1,13 @@
+<div class="container-fluid expandable-header">
+  <div class="row">
+    <div class="col-xs-6">
+      <div class="expandable-header-text" ng-bind-html="$ctrl.headerText"></div>
+    </div>
+    <div class="col-xs-6">
+      <div class="btn btn-default" ng-switch="ctrl.expanded" aria-label="expand" ng-click="$ctrl.expand()">
+        <span ng-switch-when="true" class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+      </div>
+    </div>
+  </div>
+</div>
